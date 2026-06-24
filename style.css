@@ -25,9 +25,9 @@ body{
     align-items: center;
 }
 .card{
-    width: min(400px, 94vw);
+    width: min(500px, 94vw);
     aspect-ratio: 2/3;
-    min-height: 400px;
+    min-height: 500px;
     overflow: hidden;
     background-color:white; 
     border: 2px solid white;
@@ -35,8 +35,13 @@ body{
     position: relative;
     border-radius: 20px 20px 20px 20px;
     padding: 12px;
-    animation: card-enter 400ms ease-in-out;
     transition: transform 150ms ease,box-shadow 150ms ease;
+}
+
+.card:hover,
+.card:focus-within{
+    transform: translateY(-30px);
+    box-shadow: 8px 8px 0px 0px rgb(0, 0, 0);
 }
 .image{
     width: 100%;
@@ -46,18 +51,14 @@ body{
     margin-bottom: 20px;
     background:rgb(77, 19, 77)
 }
-.card:hover,
-.card:focus-within{
-    transform: translateY(-5px);
-    box-shadow: 8px 8px 0px 0px rgb(0, 0, 0);
-}
 .image img{
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
 
- label{
+ label {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,14 +147,4 @@ h2:focus-within {
     font-weight: 500;
 }
 
-@keyframes card-enter {
-    from {
-        opacity: 0;
-        transform: translateY(14px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
  
